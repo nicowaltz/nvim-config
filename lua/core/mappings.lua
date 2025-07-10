@@ -51,8 +51,10 @@ map("n", "<leader>db", "<cmd> lua vim.diagnostic.goto_prev({ wrap = true })<CR>"
 map("i", "jk", "<ESC>")
 
 -- move lines
-map("n", "<C-j>", ":m .+1<CR>==", { desc = "move line down" })
-map("n", "<C-k>", ":m .-2<CR>==", { desc = "move line up" })
+map("n", "<C-j>", ":m .+1<CR>==", { desc = "Move line down" })
+map("n", "<C-k>", ":m .-2<CR>==", { desc = "Move line up" })
+map("v", "<C-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down", silent = true })
+map("v", "<C-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up", silent = true })
 
 map("n", "<leader>dn", "<cmd> lua vim.diagnostic.goto_next({ wrap = true })<CR>", { desc = "LSP next diagnostic" })
 map("n", "<leader>db", "<cmd> lua vim.diagnostic.goto_prev({ wrap = true })<CR>", { desc = "LSP previous diagnostic" })
