@@ -12,17 +12,18 @@ return {
 				return "make BUILD_FROM_SOURCE=true"
 			end
 		end,
-		event = "VeryLazy",
+		lazy = true,
 		version = false, -- Never set this value to "*"! Never!
 		---@module 'avante'
 		---@type avante.Config
 		opts = {
+			hints = { enabled = false },
 			provider = "claude",
 			providers = {
 				claude = {
 					endpoint = "https://api.anthropic.com",
 					model = "claude-sonnet-4-20250514",
-					timeout = 30000, -- Timeout in milliseconds
+					timeout = 30000,
 					extra_request_body = {
 						temperature = 0.75,
 						max_tokens = 20480,

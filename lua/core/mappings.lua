@@ -9,36 +9,36 @@ map("n", "gr", vim.lsp.buf.references)
 map("n", "<C-c>", "ggVGy", { desc = "Yank entire file" })
 
 map("n", "MM", function()
-	vim.fn.search("[A-Z]", "bW")
-end, { desc = "Last capital letter" })
+	vim.fn.search("[A-Z_]", "bW")
+end, { desc = "Last capital letter or underscore" })
 
 map("v", "MM", function()
-	vim.fn.search("[A-Z]", "bW")
-end, { desc = "Last capital letter" })
+	vim.fn.search("[A-Z_]", "bW")
+end, { desc = "Last capital letter or underscore" })
 
 map("x", "MM", function()
-	vim.fn.search("[A-Z]", "bW")
-end, { desc = "Last capital letter" })
+	vim.fn.search("[A-Z_]", "bW")
+end, { desc = "Last capital letter or underscore" })
 
 map("o", "MM", function()
-	vim.fn.search("[A-Z]", "bW")
-end, { desc = "Last capital letter" })
+	vim.fn.search("[A-Z_]", "bW")
+end, { desc = "Last capital letter or underscore" })
 
 map("n", "mm", function()
-	vim.fn.search("[A-Z]", "W")
-end, { desc = "Next capital letter" })
+	vim.fn.search("[A-Z_]", "W")
+end, { desc = "Next capital letter or underscore" })
 
 map("v", "mm", function()
-	vim.fn.search("[A-Z]", "W")
-end, { desc = "Next capital letter" })
+	vim.fn.search("[A-Z_]", "W")
+end, { desc = "Next capital letter or underscore" })
 
 map("x", "mm", function()
-	vim.fn.search("[A-Z]", "W")
-end, { desc = "Next capital letter" })
+	vim.fn.search("[A-Z_]", "W")
+end, { desc = "Next capital letter or underscore" })
 
 map("o", "mm", function()
-	vim.fn.search("[A-Z]", "W")
-end, { desc = "Next capital letter" })
+	vim.fn.search("[A-Z_]", "W")
+end, { desc = "Next capital letter or underscore" })
 
 map(
 	"n",
